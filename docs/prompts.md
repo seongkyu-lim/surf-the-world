@@ -70,8 +70,14 @@ https://github.com/<아이디>/<저장소>.git
    원문에서 숫자를 확인한 뒤, _posts/YYYY-MM-DD-briefing.md를 쓰고
    tracking.md와 glossary.md를 갱신한다.
 5. "발행 전 점검"을 통과하면 main 브랜치에 커밋하고 푸시한다. 강제 푸시는 하지 않는다.
-6. 마지막에 브리핑 제목과 사이트 주소(https://<아이디>.github.io/<저장소>/)를
-   한 줄로 알린다.
+   커밋은 저장소 주인 계정으로 남긴다. 커밋 전에
+   git config user.name "<아이디>"
+   git config user.email "<계정ID>+<아이디>@users.noreply.github.com"
+   을 실행하고, 커밋 메시지에 Co-Authored-By 같은 Claude 표기 줄을 넣지 않는다.
+6. 푸시가 끝나면 오늘 브리핑 주소
+   (https://<아이디>.github.io/<저장소>/YYYY/MM/DD/)를 알림으로 보낸다.
+   알림 도구가 있으면 "오늘의 브리핑: <제목> <주소>" 형식으로 보내고,
+   마지막 응답의 첫 줄에도 같은 내용을 쓴다.
 
 지켜야 할 것:
 - 원문에서 확인하지 못한 숫자는 쓰지 않는다. 웹 검색이 되지 않으면 브리핑을
@@ -80,6 +86,8 @@ https://github.com/<아이디>/<저장소>.git
 - 공개 저장소이므로 독자 개인의 정보는 쓰지 않는다.
 - 푸시가 실패하면 원인을 알리고 멈춘다.
 ```
+
+`<계정ID>`는 GitHub 계정의 숫자 ID다. `https://api.github.com/users/<아이디>`에서 `id` 값을 보면 된다. 이 noreply 주소를 쓰면 개인 이메일을 공개하지 않고도 커밋이 자기 계정으로 표시된다.
 
 ## 프롬프트를 고칠 때
 

@@ -27,7 +27,8 @@
 5. 아래 형식으로 `_posts/YYYY-MM-DD-briefing.md`를 쓴다.
 6. `tracking.md`를 갱신한다. 끝난 이슈는 "종료"로 옮기고, 새로 지켜볼 이슈는 추가한다.
 7. 오늘의 용어를 `glossary.md` 맨 위에 추가한다. 이미 있는 용어는 다시 쓰지 않는다.
-8. 발행 전 점검(아래)을 한 뒤 `main`에 커밋하고 푸시한다.
+8. 발행 전 점검(아래)을 한 뒤 `main`에 커밋하고 푸시한다. 커밋 작성자는 `CLAUDE.md`에 적힌 저장소 주인 계정으로 설정하고, 메시지는 `YYYY-MM-DD 브리핑: 제목` 한 줄로 쓴다.
+9. 오늘 브리핑 주소(`https://seongkyu-lim.github.io/surf-the-world/YYYY/MM/DD/`)를 알림으로 보낸다.
 
 ## 브리핑 형식
 
