@@ -1,0 +1,22 @@
+---
+layout: default
+title: 세상 읽기
+---
+{% assign latest = site.posts.first %}
+{% if latest %}
+<a class="lead-card" href="{{ latest.url | relative_url }}">
+  <span class="label">최신 브리핑 · {{ latest.date | date: "%Y년 %-m월 %-d일" }} {{ latest.weekday }}</span>
+  <h2>{{ latest.title }}</h2>
+  {% if latest.summary %}<p>{{ latest.summary }}</p>{% endif %}
+</a>
+{% endif %}
+
+<p class="section-label">지난 브리핑</p>
+<ul class="archive">
+  {% for post in site.posts %}
+  <li>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m.%d" }} {{ post.weekday | slice: 0 }}</time>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </li>
+  {% endfor %}
+</ul>

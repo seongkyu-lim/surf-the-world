@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  {% feed_meta %}
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand-name">{{ site.title }}</span>
+        <span class="brand-sub">{{ site.tagline }}</span>
+      </a>
+      <nav>
+        <a href="{{ '/' | relative_url }}">브리핑</a>
+        <a href="{{ '/tracking/' | relative_url }}">추적 중</a>
+        <a href="{{ '/glossary/' | relative_url }}">용어집</a>
+        <a href="{{ '/about/' | relative_url }}">소개</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>AI(Claude)가 공개 기사와 통계를 요약한 자료입니다. 오류가 있을 수 있으니 중요한 판단 전에는 원문을 확인하세요. 투자 권유가 아닙니다.</p>
+      <p><a href="https://github.com/{{ site.repository }}">GitHub에서 구축 과정과 프롬프트 보기</a> · <a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
+    </div>
+  </footer>
+</body>
+</html>

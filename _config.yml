@@ -1,0 +1,34 @@
+title: 세상 읽기
+tagline: Surf the World
+description: 경제·정치·생활·국제 뉴스를 매일 아침 5분 분량으로 정리하는 데일리 브리핑
+lang: ko
+url: https://seongkyu-lim.github.io
+baseurl: /surf-the-world
+repository: seongkyu-lim/surf-the-world
+
+timezone: Asia/Seoul
+future: true
+permalink: /:year/:month/:day/
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+# 사이트로 빌드하지 않는 파일 (GitHub에서 직접 읽는 문서)
+exclude:
+  - README.md
+  - CLAUDE.md
+  - BRIEFING_GUIDE.md
+  - SOURCES.md
+  - docs/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
